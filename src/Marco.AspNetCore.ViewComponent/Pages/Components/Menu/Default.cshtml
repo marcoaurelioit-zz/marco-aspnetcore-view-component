@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Marco.AspNetCore.ViewComponent.Models.MenuViewModel>
+
+@if (Model != null)
+{
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            @foreach (var item in Model)
+            {
+                <li><a href="@item.Path" target="_self">@item.Title</a></li>
+            }
+        </ul>
+    </div>
+}
